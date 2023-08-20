@@ -28,4 +28,6 @@ ruby chai.rb
 Ask chai a question using the following format in discord:
 ```bash
 chai [question body here]
-```
+```  
+Example usage:  
+![Example Usage](example.png?raw=true)
