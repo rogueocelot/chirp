@@ -26,11 +26,15 @@ bot.message(start_with: 'chai ') do |event|
 
     #request image
     response = client.images.generate(parameters: { prompt: question, size: "512x512"})
-    #puts response
     message = response.dig("data", 0, "url")
-    event.respond message
-    #puts message
     
+    #if the response is empty (mostly due to no being able to generate the request)
+    if message.nil?
+      event.respond "I'm sorry, I can't do that."
+    else
+      event.respond message
+    end
+
   #messages
   else
     #chatgpt api call
