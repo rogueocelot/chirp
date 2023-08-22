@@ -31,14 +31,20 @@ bot.message(start_with: 'chai') do |event|
   message = response.dig("choices", 0, "message", "content")
 
   if message.length > 1990
-    message = message[0..1970] + "..."
+    #break up the response into chunks less than 2000 characters (what discord supports) and send them one at a time
+    messageArr = message.chars.each_slice(1990).map(&:join)
+    messageArr.each do |chunk|
+      event.respond chunk
+    end
+  else
+    event.respond message
   end
 
   #print the triggering message
   #print event.message
 
   #send response back to discord
-  event.respond message
+  #event.respond message
 end
 
 bot.run

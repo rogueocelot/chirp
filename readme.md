@@ -1,4 +1,4 @@
-# chai-ruby  
+# Chai  
 
 Chai (CHatgpt Answer Interface) uses the Discord and OpenAI APIs to receive and answer ChatGPT prompts from Discord.
 
@@ -30,4 +30,5 @@ Ask chai a question using the following format in discord:
 chai [question body here]
 ```  
 Example usage:  
+
 ![Example Usage](example.png?raw=true)
