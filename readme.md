@@ -25,6 +25,8 @@ ruby chai.rb
 ```
 
 ## Use:  
+
+### Messages:  
 Ask chai a question using the following format in discord:
 ```bash
 chai [question body here]
@@ -32,3 +34,14 @@ chai [question body here]
 Example usage:  
 
 ![Example Usage](example.png?raw=true)
+
+### Images:  
+Chai supports DALLE images using the following format:  
+```bash
+chai paint [prompt here]
+```  
+It returns a URL, which should be automatically embedded by Discord.  
+
+Example usage:  
+
+![Example Usage](example2.png?raw=true)
