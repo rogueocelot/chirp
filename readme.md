@@ -1,6 +1,6 @@
-# Chai  
+# Chirp  
 
-Chai (CHatgpt Answer Interface) uses the Discord and OpenAI APIs to receive and answer ChatGPT prompts from Discord.
+Chirp uses the Discord and OpenAI APIs to receive and answer ChatGPT prompts from Discord.
 
 ## Running  
 
@@ -21,24 +21,24 @@ There are three required gems to install:
 ### Running:  
 After installing all prerequisites, the program can be run with:  
 ```bash
-ruby chai.rb
+ruby chirp.rb
 ```
 
 ## Use:  
 
 ### Messages:  
-Ask chai a question using the following format in discord:
+Ask chirp a question using the following format in discord:
 ```bash
-chai [question body here]
+chirp [question body here]
 ```  
 Example usage:  
 
 ![Example Usage](example.png?raw=true)
 
 ### Images:  
-Chai supports DALLE images using the following format:  
+Chirp supports DALLE images using the following format:  
 ```bash
-chai paint [prompt here]
+chirp paint [prompt here]
 ```  
 It returns a URL, which should be automatically embedded by Discord.  
 

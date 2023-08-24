@@ -1,4 +1,4 @@
-#CHatgpt Answer Interface
+#chirp
 #require './discordrb'
 require 'discordrb'
 require 'dotenv'
@@ -12,7 +12,7 @@ openaitoken = ENV['openaitoken']
 bot = Discordrb::Bot.new token: discordtoken
 client = OpenAI::Client.new(access_token: openaitoken)
 
-bot.message(start_with: 'chai ') do |event|
+bot.message(start_with: 'chirp ') do |event|
 
   #remove the first (triggering) word (-1 is last element in ruby)
   question = "#{event.message}"
@@ -27,7 +27,7 @@ bot.message(start_with: 'chai ') do |event|
     #request image
     response = client.images.generate(parameters: { prompt: question, size: "512x512"})
     message = response.dig("data", 0, "url")
-    
+
     #if the response is empty (mostly due to no being able to generate the request)
     if message.nil?
       event.respond "I'm sorry, I can't do that."
